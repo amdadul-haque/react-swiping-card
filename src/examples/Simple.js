@@ -3,28 +3,32 @@ import TinderCard from 'react-tinder-card'
 
 const db = [
   {
-    name: 'Richard Hendricks',
-    url: './img/richard.jpg'
+    // name: 'Richard Hendricks',
+    url: 'https://source.unsplash.com/500x300'
   },
   {
-    name: 'Erlich Bachman',
-    url: './img/erlich.jpg'
+    // name: 'Erlich Bachman',
+    url: 'https://source.unsplash.com/400x300'
+
   },
   {
-    name: 'Monica Hall',
-    url: './img/monica.jpg'
+    // name: 'Monica Hall',
+    url: 'https://source.unsplash.com/300x300'
+
   },
   {
-    name: 'Jared Dunn',
-    url: './img/jared.jpg'
+    // name: 'Jared Dunn',
+    url: 'https://source.unsplash.com/300x400'
+
   },
   {
-    name: 'Dinesh Chugtai',
-    url: './img/dinesh.jpg'
+    // name: 'Dinesh Chugtai',
+    url: 'https://source.unsplash.com/400x400'
+
   }
 ]
 
-function Simple () {
+function Simple() {
   const characters = db
   const [lastDirection, setLastDirection] = useState()
 
@@ -41,7 +45,7 @@ function Simple () {
     <div>
       <link href='https://fonts.googleapis.com/css?family=Damion&display=swap' rel='stylesheet' />
       <link href='https://fonts.googleapis.com/css?family=Alatsi&display=swap' rel='stylesheet' />
-      <h1>React Tinder Card</h1>
+      {/* <h1>React Tinder Card</h1> */}
       <div className='cardContainer'>
         {characters.map((character) =>
           <TinderCard className='swipe' key={character.name} onSwipe={(dir) => swiped(dir, character.name)} onCardLeftScreen={() => outOfFrame(character.name)}>
@@ -51,7 +55,7 @@ function Simple () {
           </TinderCard>
         )}
       </div>
-      {lastDirection ? <h2 className='infoText'>You swiped {lastDirection}</h2> : <h2 className='infoText' />}
+      {/* {lastDirection ? <h2 className='infoText'>You swiped {lastDirection}</h2> : <h2 className='infoText' />} */}
     </div>
   )
 }
